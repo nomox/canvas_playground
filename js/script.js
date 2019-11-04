@@ -137,12 +137,12 @@ function initDraw(ctx) {
 			ctx.beginPath();
 			for (let tr of n) {
 				// tr = rotate(m, sin(phi));
-				tr = transform(tr, [-110, -20]);
+				tr = transform(tr, [-130, -20]);
 				tr = rotateY(tr, count/48);
-				tr = rotateX(tr, phi/4);
-				// tr = rotateZ(tr, sin(count/48));
+				// tr = rotateX(tr, phi/2);
+				tr = rotateZ(tr, sin(count/48));
 
-				tr = projection(tr, 250);
+				tr = projection(tr, 260);
 				tr = transform(tr, [128, 128]);
 				ctx.lineTo(tr[0], tr[1]);
 			}
